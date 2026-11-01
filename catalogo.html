@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LisBly - Catálogo</title>
+    <link rel="stylesheet" href="catalogo.css">
+</head> 
+<body>
+
+    <header class="topo">
+        <div class="logo">
+            <div class="logo-icon">▥</div>
+            <h2>BiblioSys</h2>
+        </div>
+
+        <nav class="menu">
+            <a href="catalogo.html" class="ativo">Catálogo</a>
+            <a href="emprestimos.html">Meus Empréstimos</a>
+            <a href="#" class="avatar">A</a>
+            <a href="index.html" class="sair" title="Sair">⇥</a>
+        </nav>
+    </header>
+
+    <main class="catalogo-container">
+
+        <section class="busca">
+            <input
+                type="search"
+                id="pesquisa"
+                placeholder="⌕  Buscar título ou autor..."
+            >
+        </section>
+
+        <section class="filtros">
+            <button class="filtro ativo" data-genero="todos">Todos</button>
+            <button class="filtro" data-genero="Romance">Romance</button>
+            <button class="filtro" data-genero="Naturalismo">Naturalismo</button>
+            <button class="filtro" data-genero="Modernismo">Modernismo</button>
+            <button class="filtro" data-genero="Romantismo">Romantismo</button>
+            <button class="filtro" data-genero="Romance Social">Romance Social</button>
+        </section>
+
+        <section class="lista-livros" id="listaLivros">
+
+            <article class="livro" data-genero="Romance">
+                <div class="livro-conteudo">
+                    <div class="capa capa-vermelha">
+                        <span>Dom<br>Cas murro</span>
+                    </div>
+
+                    <div class="informacoes">
+                        <h3>Dom Casmurro</h3>
+                        <p class="autor">Machado de Assis</p>
+                        <div class="etiquetas">
+                            <span>Romance</span>
+                            <span>1899</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="disponibilidade">
+                    <span><strong>2</strong> / 3 disponíveis</span>
+                    <span class="status disponivel">Disponível</span>
+                </div>
+
+                <button class="botao-emprestimo"
+                    data-livro="Dom Casmurro">
+                    Solicitar Empréstimo
+                </button>
+            </article>
+
+            <article class="livro" data-genero="Romance">
+                <div class="livro-conteudo">
+                    <div class="capa capa-azul">
+                        <span>Grande Sertão:<br>Veredas</span>
+                    </div>
+
+                    <div class="informacoes">
+                        <h3>Grande Sertão: Veredas</h3>
+                        <p class="autor">João Guimarães Rosa</p>
+                        <div class="etiquetas">
+                            <span>Romance</span>
+                            <span>1956</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="disponibilidade">
+                    <span><strong class="indisponivel">0</strong> / 1 disponíveis</span>
+                    <span class="status esgotado">Indisponível</span>
+                </div>
+
+                <button class="botao-emprestimo desativado" disabled>
+                    Sem exemplares disponíveis
+                </button>
+            </article>
+
+            <article class="livro" data-genero="Romance">
+                <div class="livro-conteudo">
+                    <div class="capa capa-roxa">
+                        <span>Memórias<br>Póstumas</span>
+                    </div>
+
+                    <div class="informacoes">
+                        <h3>Memórias Póstumas de Brás Cubas</h3>
+                        <p class="autor">Machado de Assis</p>
+                        <div class="etiquetas">
+                            <span>Romance</span>
+                            <span>1881</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="disponibilidade">
+                    <span><strong>1</strong> / 2 disponíveis</span>
+                    <span class="status disponivel">Disponível</span>
+                </div>
+
+                <button class="botao-emprestimo"
+                    data-livro="Memórias Póstumas de Brás Cubas">
+                    Solicitar Empréstimo
+                </button>
+            </article>
+
+        </section>
+    </main>
+
+    <script>
+        const filtros = document.querySelectorAll(".filtro");
+        const livros = document.querySelectorAll(".livro");
+        const pesquisa = document.getElementById("pesquisa");
+
+        let generoAtual = "todos";
+
+        function atualizarCatalogo() {
+            const termo = pesquisa.value.toLowerCase().trim();
+
+            livros.forEach(livro => {
+                const genero = livro.dataset.genero;
+                const texto = livro.innerText.toLowerCase();
+
+                const correspondeGenero =
+                    generoAtual === "todos" || genero === generoAtual;
+
+                const correspondePesquisa = texto.includes(termo);
+
+                livro.style.display =
+                    correspondeGenero && correspondePesquisa
+                    ? "block"
+                    : "none";
+            });
+        }
+
+        filtros.forEach(filtro => {
+            filtro.addEventListener("click", () => {
+                filtros.forEach(item => item.classList.remove("ativo"));
+                filtro.classList.add("ativo");
+
+                generoAtual = filtro.dataset.genero;
+                atualizarCatalogo();
+            });
+        });
+
+        pesquisa.addEventListener("input", atualizarCatalogo);
+
+        document.querySelectorAll(".botao-emprestimo:not(:disabled)")
+            .forEach(botao => {
+                botao.addEventListener("click", () => {
+                    const livro = botao.dataset.livro;
+
+                    alert(
+                        "Solicitação de empréstimo: " + livro +
+                        "\n\nEsta é uma demonstração visual. " +
+                        "Para registrar o empréstimo, será necessário " +
+                        "conectar o site a um sistema de dados."
+                    );
+                });
+            });
+    </script>
+
+</body>
+</html>
