@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BiblioSys - Acervo de Livros</title>
+    <link rel="stylesheet" href="acervo.css">
+</head>
+<body>
+
+    <div class="admin-layout">
+        
+        <!-- BARRA LATERAL (SIDEBAR) COM BOTÕES DE NAVEGAÇÃO -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                    </svg>
+                </div>
+                <div class="logo-titles">
+                    <h2>BiblioSys</h2>
+                    <span>ADMINISTRAÇÃO</span>
+                </div>
+            </div>
+
+            <nav class="sidebar-menu">
+                <a href="visao-geral.html" class="menu-item">
+                    <span class="icon">⊞</span> Visão Geral
+                </a>
+                <a href="acervo.html" class="menu-item active">
+                    <span class="icon">📚</span> Acervo
+                </a>
+                <a href="emprestimos.html" class="menu-item">
+                    <span class="icon">📖</span> Empréstimos
+                    <span class="badge">3</span>
+                </a>
+                <a href="solicitacoes.html" class="menu-item">
+                    <span class="icon">📋</span> Solicitações
+                    <span class="badge">2</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-info">
+                    <div class="user-avatar">A</div>
+                    <div class="user-details">
+                        <strong>Administrador</strong>
+                        <span>admin@biblioteca.com</span>
+                    </div>
+                </div>
+                <a href="login.html" class="logout-link">↪️ Sair</a>
+            </div>
+        </aside>
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main class="main-container">
+            
+            <!-- TOPO DA PÁGINA -->
+            <header class="top-header">
+                <div class="title-group">
+                    <h1>Acervo de Livros</h1>
+                    <span class="date-tag">18/11/2026</span>
+                </div>
+                <button class="btn-primary">+ Novo Livro</button>
+            </header>
+
+            <!-- BARRA DE PESQUISA -->
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" placeholder="Buscar por título ou autor...">
+            </div>
+
+            <!-- TABELA DE LIVROS ORGANIZADA -->
+            <div class="table-wrapper">
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 32%;">Livro</th>
+                            <th style="width: 15%;">Gênero</th>
+                            <th style="width: 22%;">ISBN</th>
+                            <th style="width: 8%;">Ano</th>
+                            <th style="width: 8%; text-align: center;">Total</th>
+                            <th style="width: 15%; text-align: center;">Disponíveis</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Livro 1 -->
+                        <tr>
+                            <td>
+                                <div class="book-cell">
+                                    <div class="mini-cover" style="background-color: #D95338;">Dom</div>
+                                    <div class="book-meta">
+                                        <span class="b-title">Dom Casmurro</span>
+                                        <span class="b-author">Machado de Assis</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td><span class="genre-tag">Romance</span></td>
+                            <td class="code-text">978-85-359-0277-5</td>
+                            <td>1899</td>
+                            <td class="text-center font-bold">3</td>
+                            <td class="text-center status-green">2</td>
+                        </tr>
+
+                        <!-- Livro 2 -->
+                        <tr>
+                            <td>
+                                <div class="book-cell">
+                                    <div class="mini-cover" style="background-color: #1985A1;">Grande</div>
+                                    <div class="book-meta">
+                                        <span class="b-title">Grande Sertão: Veredas</span>
+                                        <span class="b-author">João Guimarães Rosa</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td><span class="genre-tag">Romance</span></td>
+                            <td class="code-text">978-85-220-0101-9</td>
+                            <td>1956</td>
+                            <td class="text-center font-bold">1</td>
+                            <td class="text-center status-red">0</td>
+                        </tr>
+
+                        <!-- Livro 3 -->
+                        <tr>
+                            <td>
+                                <div class="book-cell">
+                                    <div class="mini-cover" style="background-color: #6B5B95;">Memórias</div>
+                                    <div class="book-meta">
+                                        <span class="b-title">Memórias Póstumas de Brás Cubas</span>
+                                        <span class="b-author">Machado de Assis</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td><span class="genre-tag">Romance</span></td>
+                            <td class="code-text">978-85-359-0278-2</td>
+                            <td>1881</td>
+                            <td class="text-center font-bold">4</td>
+                            <td class="text-center status-green">4</td>
+                        </tr>
+
+                        <!-- Livro 4 -->
+                        <tr>
+                            <td>
+                                <div class="book-cell">
+                                    <div class="mini-cover" style="background-color: #1B998B;">Cortiço</div>
+                                    <div class="book-meta">
+                                        <span class="b-title">O Cortiço</span>
+                                        <span class="b-author">Aluísio Azevedo</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td><span class="genre-tag">Naturalismo</span></td>
+                            <td class="code-text">978-85-359-0279-9</td>
+                            <td>1890</td>
+                            <td class="text-center font-bold">2</td>
+                            <td class="text-center status-green">2</td>
+                        </tr>
+
+                        <!-- Livro 5 -->
+                        <tr>
+                            <td>
+                                <div class="book-cell">
+                                    <div class="mini-cover" style="background-color: #E09F3E;">Vidas</div>
+                                    <div class="book-meta">
+                                        <span class="b-title">Vidas Secas</span>
+                                        <span class="b-author">Graciliano Ramos</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td><span class="genre-tag">Modernismo</span></td>
+                            <td class="code-text">978-85-220-0245-0</td>
+                            <td>1938</td>
+                            <td class="text-center font-bold">3</td>
+                            <td class="text-center status-green">3</td>
+                        </tr>
+
+                        <!-- Livro 6 -->
+                        <tr>
+                            <td>
+                                <div class="book-cell">
+                                    <div class="mini-cover" style="background-color: #BC4749;">Moreninha</div>
+                                    <div class="book-meta">
+                                        <span class="b-title">A Moreninha</span>
+                                        <span class="b-author">Joaquim Manuel de Macedo</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td><span class="genre-tag">Romance</span></td>
+                            <td class="code-text">978-85-359-0001-6</td>
+                            <td>1844</td>
+                            <td class="text-center font-bold">1</td>
+                            <td class="text-center status-orange">1</td>
+                        </tr>
+
+                        <!-- Livro 7 -->
+                        <tr>
+                            <td>
+                                <div class="book-cell">
+                                    <div class="mini-cover" style="background-color: #2A9D8F;">Iracema</div>
+                                    <div class="book-meta">
+                                        <span class="b-title">Iracema</span>
+                                        <span class="b-author">José de Alencar</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td><span class="genre-tag">Romantismo</span></td>
+                            <td class="code-text">978-85-220-0099-9</td>
+                            <td>1865</td>
+                            <td class="text-center font-bold">2</td>
+                            <td class="text-center status-green">2</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </main>
+    </div>
+
+</body>
+</html>

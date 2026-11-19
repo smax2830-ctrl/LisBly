@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar conta LisBly</title>
+    <link rel="stylesheet" href="criarconta.css">
+</head>
+<body>
+    <main class="cadastro-container">
+    <header class="logo">
+        <div class="logo-icon"></div>
+        <h2>LISBLY</h2>
+    </header>
+
+    <section class="welcome">
+        <h1>Criar Conta</h1>
+        <p>Preencha seus dados</p>
+    </section>
+
+    <form id="formCadastro">
+        <label for="email">E-mail</label>
+        <input
+        type="email"
+        id="email"
+        placeholder="Digite seu email"
+        required>
+
+        <label for="senha">Senha</label>
+        <input
+        type="password"
+        id="senha"
+        placeholder="Crie sua senha"
+        minlength="8"
+        required>
+        <label for="confirmarSenha">Confirmar Senha</label>
+        <input
+        type="password"
+        id="confirmarsenha"
+        placeholder="Digite a senha novamente"
+        minlegth="8"
+        required>
+
+        <button type="submit" class="submit-btn">
+            Criar Conta
+        </button>
+    </form>
+    <p class="login-link">
+        Ja tem uma conta?
+        <a href="index.html">Fazer Login</a>
+    </p>
+</main>
+<script>
+    document.getElementByld("formCadastro")
+    .addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const senha =
+        document.getElementbyld("senha").value;
+        const confirmar =
+        document.getElementByld("confirmarSenha").value;
+
+        if(senha !==confirmar) {
+            alert("As senhas não coincidem");
+            return;
+        }
+        alert("Cadastro preenchido! Para criar a conta de verdade, ainda precisamos conectar um sistema de cadastro.");
+
+    });
+</script>
+
+</body>
+</html>

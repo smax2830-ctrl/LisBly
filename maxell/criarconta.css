@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080F20;
+    color: #FFFFFF;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.cadastro-container {
+    width: 100%;
+    max-width: 460px;
+    padding: 32px 28px;
+    background: linear-gradient(150deg, #143B61, #101C34);
+    border: 1px solid #29415E;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0,0,0, 0.35);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap:12px;
+    margin-bottom: 30px;
+}
+
+.login-icon {
+    width: 46px;
+    height: 46px;
+    background: #FFB719;
+    color: #10213C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 11px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo h2 {
+    font-size: 23px;
+}
+.welcome h1 {
+    font-family: Georgia, serif;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.welcome p {
+    color: #BBC6DD;
+    font-size: 14px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 16px 0 8px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    background: #10213C;
+    color: #FFFFFF;
+    border: 1px solid #315171;
+    border-radius: 9px;
+    font-size: 14px;
+    outline: none;
+}
+
+input::placeholder {
+    color: #9AACC8;
+}
+
+input:focus {
+    border-color: #FFB719;
+}
+
+.submit-btn {
+    width: 100%;
+    margin-top: 26px;
+    padding: 16px;
+    background: #FFB719;
+    color: #000000;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.submit-btn:hover {
+    background: #FFCA4D;
+}
+
+.login-link {
+    margin-top: 22px;
+    text-align: center;
+    color: #BBC6DD;
+    font-size: 13px;
+
+}
+
+.login-link a {
+    color: #FFB719;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+    cadastro-container {
+        padding: 25px 20px;
+    }
+}

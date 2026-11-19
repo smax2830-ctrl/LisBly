@@ -1,0 +1,432 @@
+/* CONFIGURAÇÃO GERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #061936;
+    color: #ffffff;
+}
+
+
+/* CABEÇALHO */
+
+.topo {
+    background: linear-gradient(120deg, #132230, #0b1722);
+    padding: 30px 20px;
+    min-height: 310px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 30px;
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-icon {
+    width: 105px;
+    height: 105px;
+
+    background: #ffcf24;
+    color: #704300;
+
+    border-radius: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 65px;
+    font-weight: bold;
+}
+
+.logo h1 {
+    font-size: 48px;
+    color: white;
+}
+
+
+/* MENU */
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+
+    font-size: 25px;
+    font-weight: bold;
+
+    padding: 30px 45px;
+    border-radius: 15px;
+}
+
+.menu a.ativo {
+    background: #ffca20;
+    color: #704300;
+}
+
+
+/* USUÁRIO */
+
+.usuario {
+    position: absolute;
+    top: 335px;
+    right: 13%;
+}
+
+.avatar {
+    width: 78px;
+    height: 78px;
+
+    background:#07577D;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 35px;
+    font-weight: bold;
+}
+
+
+/* CONTEÚDO */
+
+.conteudo {
+    width: 90%;
+    max-width: 1000px;
+    margin: 35px auto;
+}
+
+
+/* CAMPO DE PESQUISA */
+
+.pesquisa {
+    background: #087eae;
+
+    border: 2px solid #159bc1;
+    border-radius: 18px;
+
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    margin-bottom: 35px;
+}
+
+.pesquisa span {
+    font-size: 35px;
+}
+
+.pesquisa input {
+    background: transparent;
+    border: none;
+    outline: none;
+
+    color: white;
+    font-size: 25px;
+
+    width: 100%;
+}
+
+.pesquisa input::placeholder {
+    color: #e2f4f7;
+}
+
+
+/* CATEGORIAS */
+
+.categorias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+.btn-categoria {
+    background: #0da8b5;
+    color: white;
+
+    border: none;
+    border-radius: 18px;
+
+    padding: 23px 35px;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.btn-categoria:hover {
+    background: #0b1722;
+}
+
+.btn-categoria.ativo {
+    background: #ffca20;
+    color: #704300;
+}
+
+
+/* CARTÕES DOS LIVROS */
+
+.livro {
+    background: linear-gradient(120deg, #08264A, #073c70);
+
+    border-radius: 22px;
+
+    padding: 25px;
+
+    margin-bottom: 30px;
+
+    display: grid;
+    grid-template-columns: 145px 1fr;
+    gap: 25px;
+
+    border: 2px solid #124d7b;
+    border-top: 10px solid #ff6b00;
+}
+
+
+/* CORES DAS BORDAS */
+
+.livro-laranja {
+    border-top-color: #ff6b00;
+}
+
+.livro-verde {
+    border-top-color: #08264A;
+}
+
+
+/* CAPAS */
+
+.capa {
+    width: 145px;
+    height: 205px;
+
+    display: flex;
+    align-items: flex-end;
+
+    padding: 12px;
+
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+
+    background-image:
+        repeating-linear-gradient(
+            to bottom,
+            transparent 0px,
+            transparent 39px,
+            rgba(255,255,255,0.3) 40px,
+            transparent 42px
+        );
+}
+
+.capa-laranja {
+    background-color: #f45108;
+}
+
+.capa-verde {
+    background-color: #05a9bc;
+}
+
+
+/* INFORMAÇÕES */
+
+.info-livro h2 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.info-livro p {
+    font-size: 23px;
+    color: #d0e8ed;
+    margin-bottom: 22px;
+}
+
+
+/* ETIQUETAS */
+
+.etiquetas {
+    display: flex;
+    gap: 12px;
+}
+
+.tag {
+    background: #08264A;
+    color: white;
+
+    padding: 12px 18px;
+    border-radius: 10px;
+
+    font-size: 18px;
+}
+
+
+/* DISPONIBILIDADE */
+
+.status {
+    grid-column: 1 / 3;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 5px;
+}
+
+.status p {
+    font-size: 20px;
+}
+
+.status strong {
+    color: #13df85;
+    font-size: 30px;
+}
+
+.disponivel {
+    background: #087b51;
+    color: #32e6a0;
+
+    padding: 13px 20px;
+    border-radius: 10px;
+
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.indisponivel {
+    background: #a72e45;
+    color: #ffaaaa;
+
+    padding: 13px 20px;
+    border-radius: 10px;
+
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* BOTÃO SOLICITAR EMPRÉSTIMO */
+
+.botao-emprestimo {
+    grid-column: 1 / 3;
+
+    width: 100%;
+    padding: 23px;
+
+    margin-top: 0;
+
+    background: #ffb900;
+    color: #633900;
+
+    border: none;
+    border-radius: 14px;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.botao-emprestimo:hover {
+    background: #f5a500;
+}
+
+.botao-emprestimo:disabled {
+    background: #572b3b;
+    color: #ffb0a0;
+    cursor: not-allowed;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 600px) {
+
+    .logo-icon {
+        width: 75px;
+        height: 75px;
+        font-size: 45px;
+    }
+
+    .logo h1 {
+        font-size: 35px;
+    }
+
+    .menu {
+        gap: 5px;
+    }
+
+    .menu a {
+        font-size: 17px;
+        padding: 18px;
+    }
+
+    .usuario {
+        display: none;
+    }
+
+    .livro {
+        grid-template-columns: 100px 1fr;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .capa {
+        width: 100px;
+        height: 150px;
+        font-size: 13px;
+    }
+
+    .info-livro h2 {
+        font-size: 18px;
+    }
+
+    .info-livro p {
+        font-size: 16px;
+    }
+
+    .tag {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .btn-categoria {
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    .status p {
+        font-size: 15px;
+    }
+
+    .botao-emprestimo {
+        font-size: 17px;
+    }
+
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BiblioSys - Solicitações</title>
+    <link rel="stylesheet" href="solicitacoes.css">
+</head>
+<body>
+
+    <div class="admin-layout">
+        
+        <!-- BARRA LATERAL (SIDEBAR) -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                    </svg>
+                </div>
+                <div class="logo-titles">
+                    <h2>BiblioSys</h2>
+                    <span>ADMINISTRAÇÃO</span>
+                </div>
+            </div>
+
+            <nav class="sidebar-menu">
+                <a href="admin.html" class="menu-item">
+                    <span class="icon">⊞</span> Visão Geral
+                </a>
+                <a href="acervo.html" class="menu-item">
+                    <span class="icon">📚</span> Acervo
+                </a>
+                <a href="emprestimos.html" class="menu-item">
+                    <span class="icon">📖</span> Empréstimos
+                    <span class="badge">3</span>
+                </a>
+                <a href="solicitacoes.html" class="menu-item active">
+                    <span class="icon">📋</span> Solicitações
+                    <span class="badge">2</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-info">
+                    <div class="user-avatar">A</div>
+                    <div class="user-details">
+                        <strong>Administrador</strong>
+                        <span>admin@biblioteca.com</span>
+                    </div>
+                </div>
+                <a href="login.html" class="logout-link">↪️ Sair</a>
+            </div>
+        </aside>
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main class="main-container">
+            
+            <!-- TOPO DA PÁGINA -->
+            <header class="top-header">
+                <div class="title-group">
+                    <h1>Solicitações Pendentes</h1>
+                    <span class="date-tag">18/11/2026</span>
+                </div>
+            </header>
+
+            <!-- BARRA DE PESQUISA -->
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" placeholder="Buscar por leitor ou título...">
+            </div>
+
+            <!-- LISTA DE SOLICITAÇÕES -->
+            <div class="requests-wrapper">
+                <div class="requests-list">
+                    
+                    <!-- Solicitação 1 -->
+                    <div class="request-card">
+                        <div class="request-book-info">
+                            <div class="mini-cover" style="background-color: #1B998B;">Cortiço</div>
+                            <div class="request-details">
+                                <span class="req-title">O Cortiço</span>
+                                <span class="req-user">Solicitado por: <strong>Ana Beatriz Santos</strong></span>
+                                <span class="req-date">Data do pedido: 07/11/2026</span>
+                            </div>
+                        </div>
+                        <div class="request-actions">
+                            <button class="btn-approve">Aprovar Empréstimo</button>
+                            <button class="btn-reject">Recusar</button>
+                        </div>
+                    </div>
+
+                    <!-- Solicitação 2 -->
+                    <div class="request-card">
+                        <div class="request-book-info">
+                            <div class="mini-cover" style="background-color: #1985A1;">São</div>
+                            <div class="request-details">
+                                <span class="req-title">São Bernardo</span>
+                                <span class="req-user">Solicitado por: <strong>Fernanda Oliveira</strong></span>
+                                <span class="req-date">Data do pedido: 09/11/2026</span>
+                            </div>
+                        </div>
+                        <div class="request-actions">
+                            <button class="btn-approve">Aprovar Empréstimo</button>
+                            <button class="btn-reject">Recusar</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+</body>
+</html>

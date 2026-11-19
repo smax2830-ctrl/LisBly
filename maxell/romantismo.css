@@ -1,0 +1,244 @@
+/* CONFIGURAÇÃO GERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #061f3d;
+    color: white;
+}
+
+/* CABEÇALHO */
+
+header {
+    background: #075080;
+    padding: 25px;
+    text-align: center;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.logo-simbolo {
+    background: #ffcc00;
+    color: #604500;
+    width: 75px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+}
+
+/* MENU */
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 15px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.voltar {
+    background: #16b6c5;
+    padding: 18px;
+    border-radius: 12px;
+}
+
+.perfil {
+    background: #10aabb;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+/* CONTEÚDO */
+
+.conteudo {
+    padding: 30px;
+}
+
+.conteudo h2 {
+    font-size: 32px;
+    margin-bottom: 35px;
+}
+
+/* CARDS DOS LIVROS */
+
+.livro {
+    background: linear-gradient(135deg, #075080, #062b50);
+    border-top: 7px solid #ff792b;
+    border-radius: 18px;
+    padding: 25px;
+    margin-bottom: 25px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+    align-items: flex-start;
+}
+
+.livro.roxo {
+    border-top-color: #bd79dc;
+}
+
+.livro.azul {
+    border-top-color: #16b6c5;
+}
+
+/* CAPAS */
+
+.capa {
+    width: 145px;
+    height: 225px;
+    display: flex;
+    align-items: flex-end;
+    padding: 12px;
+
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+
+    border-radius: 3px;
+    flex-shrink: 0;
+}
+
+.capa-laranja {
+    background: #f47718;
+}
+
+.capa-roxa {
+    background: #a65bc4;
+}
+
+.capa-azul {
+    background: #079cbd;
+}
+
+.capa-verde {
+    background: #168b72;
+}
+
+/* INFORMAÇÕES */
+
+.informacoes {
+    flex: 1;
+    min-width: 150px;
+}
+
+.informacoes h3 {
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.autor {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #e4f2fa;
+}
+
+/* ETIQUETAS */
+
+.etiquetas {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.etiquetas span {
+    background: #10aabb;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/* DISPONIBILIDADE */
+
+.disponibilidade {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 15px;
+    font-size: 17px;
+}
+
+.quantidade {
+    color: #28e59a;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.status {
+    background: #079e68;
+    color: #70ffb8;
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+/* BOTÃO DE EMPRÉSTIMO */
+
+.solicitar {
+    width: 100%;
+    background: #ffc107;
+    color: #714500;
+
+    border: none;
+    padding: 22px;
+    border-radius: 12px;
+
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.solicitar:hover {
+    background: #e9ae00;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 500px) {
+
+    .conteudo {
+        padding: 15px;
+    }
+
+    .livro {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .capa {
+        width: 110px;
+        height: 165px;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
+
+    .conteudo h2 {
+        font-size: 26px;
+    }
+}

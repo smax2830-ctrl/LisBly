@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LISBLY - Entrar</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <main class="login-container">
+
+        <header class="logo">
+            <div class="logo-icon">L</div>
+            <h2>LISBLY</h2>
+        </header>
+
+        <section class="welcome">
+            <h1>ENTRAR</h1>
+        </section>
+
+        <section class="access-section">
+            <h3>TIPO DE ACESSO</h3>
+
+            <div class="access-options">
+
+                <button
+                    type="button"
+                    class="access-btn active"
+                    data-type="login">
+                    Fazer Login
+                </button>
+
+                <button
+                    type="button"
+                    class="access-btn"
+                    data-type="cadastro">
+                    Criar Conta
+                </button>
+
+            </div>
+        </section>
+
+        <button
+            type="button"
+            class="submit-btn"
+            id="accessSystem">
+            Acessar Sistema
+        </button>
+
+    </main>
+
+    <script>
+        // Seleciona os botões
+        const botoes = document.querySelectorAll(".access-btn");
+
+        // Guarda a opção selecionada
+        let tipoSelecionado = "login";
+
+        // Permite selecionar Fazer Login ou Criar Conta
+        botoes.forEach(botao => {
+            botao.addEventListener("click", () => {
+
+                botoes.forEach(item => {
+                    item.classList.remove("active");
+                });
+
+                botao.classList.add("active");
+
+                tipoSelecionado = botao.dataset.type;
+            });
+        });
+
+        // Abre a página somente ao clicar em Acessar Sistema
+        document.getElementById("accessSystem")
+            .addEventListener("click", () => {
+
+                if (tipoSelecionado === "login") {
+                    window.location.href = "login.html";
+                } 
+                else if (tipoSelecionado === "cadastro") {
+                    window.location.href = "criarconta.html";
+                }
+
+            });
+    </script>
+
+</body>
+</html>

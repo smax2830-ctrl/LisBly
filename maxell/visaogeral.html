@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BiblioSys - Visão Geral</title>
+    <link rel="stylesheet" href="visaogeral.css">
+</head>
+<body>
+
+    <div class="admin-layout">
+        
+        <!-- BARRA LATERAL (SIDEBAR) -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                    </svg>
+                </div>
+                <div class="logo-titles">
+                    <h2>LisBly</h2>
+                    <span>ADMINISTRAÇÃO</span>
+                </div>
+            </div>
+
+            <nav class="sidebar-menu">
+                <a href="admin.html" class="menu-item active">
+                    <span class="icon">⊞</span> Visão Geral
+                </a>
+                <a href="acervo.html" class="menu-item">
+                    <span class="icon">📚</span> Acervo
+                </a>
+                <a href="emprestimos.html" class="menu-item">
+                    <span class="icon">📖</span> Empréstimos
+                    <span class="badge">3</span>
+                </a>
+                <a href="solicitacoes.html" class="menu-item">
+                    <span class="icon">📋</span> Solicitações
+                    <span class="badge">2</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-info">
+                    <div class="user-avatar">A</div>
+                    <div class="user-details">
+                        <strong>Administrador</strong>
+                        <span>admin@biblioteca.com</span>
+                    </div>
+                </div>
+                <a href="login.html" class="logout-link">↪️ Sair</a>
+            </div>
+        </aside>
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main class="main-container">
+            
+            <!-- TOPO DA PÁGINA -->
+            <header class="top-header">
+                <div class="title-group">
+                    <h1>Visão Geral</h1>
+                    <span class="date-tag">18/11/2026</span>
+                </div>
+            </header>
+
+            <!-- CARDS DE RESUMO (KPIs) -->
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number color-cyan">12</span>
+                    <strong class="stat-title">Total de Títulos</strong>
+                    <span class="stat-desc">26 exemplares</span>
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-number color-green">24</span>
+                    <strong class="stat-title">Disponíveis</strong>
+                    <span class="stat-desc">para empréstimo</span>
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-number color-yellow">3</span>
+                    <strong class="stat-title">Emprestados</strong>
+                    <span class="stat-desc">em circulação</span>
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-number color-orange">2</span>
+                    <strong class="stat-title">Solicitações</strong>
+                    <span class="stat-desc">aguardando aprovação</span>
+                </div>
+            </section>
+
+            <!-- SEÇÃO DE SOLICITAÇÕES PENDENTES -->
+            <section class="pending-panel">
+                <div class="panel-header">
+                    <h2>Solicitações Pendentes</h2>
+                    <a href="solicitacoes.html" class="view-all-link">Ver todas →</a>
+                </div>
+
+                <div class="pending-list">
+                    <!-- Item 1 -->
+                    <div class="pending-item">
+                        <div class="pending-book">
+                            <div class="mini-cover" style="background-color: #1B998B;">Cortiço</div>
+                            <div class="pending-info">
+                                <strong>O Cortiço</strong>
+                                <span>Ana Beatriz Santos</span>
+                                <small>07/11/2026</small>
+                            </div>
+                        </div>
+                        <div class="pending-actions">
+                            <button class="btn-approve">Aprovar</button>
+                            <button class="btn-reject">Recusar</button>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="pending-item">
+                        <div class="pending-book">
+                            <div class="mini-cover" style="background-color: #1985A1;">São</div>
+                            <div class="pending-info">
+                                <strong>São Bernardo</strong>
+                                <span>Fernanda Oliveira</span>
+                                <small>09/11/2026</small>
+                            </div>
+                        </div>
+                        <div class="pending-actions">
+                            <button class="btn-approve">Aprovar</button>
+                            <button class="btn-reject">Recusar</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>

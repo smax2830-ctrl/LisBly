@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BiblioSys - Empréstimos</title>
+    <link rel="stylesheet" href="emprestimos.css">
+</head>
+<body>
+
+    <div class="admin-layout">
+        
+        <!-- BARRA LATERAL (SIDEBAR) -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                    </svg>
+                </div>
+                <div class="logo-titles">
+                    <h2>BiblioSys</h2>
+                    <span>ADMINISTRAÇÃO</span>
+                </div>
+            </div>
+
+            <nav class="sidebar-menu">
+                <a href="visao-geral.html" class="menu-item">
+                    <span class="icon">⊞</span> Visão Geral
+                </a>
+                <a href="acervo.html" class="menu-item">
+                    <span class="icon">📚</span> Acervo
+                </a>
+                <a href="emprestimos.html" class="menu-item active">
+                    <span class="icon">📖</span> Empréstimos
+                    <span class="badge">3</span>
+                </a>
+                <a href="solicitacoes.html" class="menu-item">
+                    <span class="icon">📋</span> Solicitações
+                    <span class="badge">2</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-info">
+                    <div class="user-avatar">A</div>
+                    <div class="user-details">
+                        <strong>Administrador</strong>
+                        <span>admin@biblioteca.com</span>
+                    </div>
+                </div>
+                <a href="login.html" class="logout-link">↪️ Sair</a>
+            </div>
+        </aside>
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main class="main-container">
+            
+            <!-- TOPO DA PÁGINA -->
+            <header class="top-header">
+                <div class="title-group">
+                    <h1>Controle de Empréstimos</h1>
+                    <span class="date-tag">18/11/2026</span>
+                </div>
+                <button class="btn-primary">+ Novo Empréstimo</button>
+            </header>
+
+            <!-- BARRA DE PESQUISA -->
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" placeholder="Buscar por leitor, título ou código...">
+            </div>
+
+            <!-- TABELA DE EMPRÉSTIMOS -->
+            <div class="table-wrapper">
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 28%;">Livro</th>
+                            <th style="width: 20%;">Leitor(a)</th>
+                            <th style="width: 15%;">Data Empréstimo</th>
+                            <th style="width: 15%;">Devolução Prevista</th>
+                            <th style="width: 12%; text-align: center;">Status</th>
+                            <th style="width: 10%; text-align: center;">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Empréstimo 1 -->
+                        <tr>
+                            <td>
+                                <div class="book-cell">
+                                    <div class="mini-cover" style="background-color: #D95338;">Dom</div>
+                                    <div class="book-meta">
+                                        <span class="b-title">Dom Casmurro</span>
+                                        <span class="b-author">Machado de Assis</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="book-meta">
+                                    <span class="b-title">Ana Beatriz Santos</span>
+                                    <span class="b-author">ana.santos@email.com</span>
+                                </div>
+                            </td>
+                            <td class="code-text">07/11/2026</td>
+                            <td class="code-text">21/11/2026</td>
+                            <td class="text-center status-green">Ativo</td>
+                            <td class="text-center">
+                                <button class="btn-action" style="background-color: #162c3d; color: #38bdf8; border: none; padding: 6px 12px; border-radius: 6px; cursor: pointer; font-size: 0.8rem; font-weight: 600;">Devolver</button>
+                            </td>
+                        </tr>
+
+                        <!-- Empréstimo 2 -->
+                        <tr>
+                            <td>
+                                <div class="book-cell">
+                                    <div class="mini-cover" style="background-color: #1985A1;">Grande</div>
+                                    <div class="book-meta">
+                                        <span class="b-title">Grande Sertão: Veredas</span>
+                                        <span class="b-author">João Guimarães Rosa</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="book-meta">
+                                    <span class="b-title">Carlos Eduardo Lima</span>
+                                    <span class="b-author">carlos.lima@email.com</span>
+                                </div>
+                            </td>
+                            <td class="code-text">01/11/2026</td>
+                            <td class="code-text">15/11/2026</td>
+                            <td class="text-center status-red">Atrasado</td>
+                            <td class="text-center">
+                                <button class="btn-action" style="background-color: #162c3d; color: #38bdf8; border: none; padding: 6px 12px; border-radius: 6px; cursor: pointer; font-size: 0.8rem; font-weight: 600;">Devolver</button>
+                            </td>
+                        </tr>
+
+                        <!-- Empréstimo 3 -->
+                        <tr>
+                            <td>
+                                <div class="book-cell">
+                                    <div class="mini-cover" style="background-color: #E09F3E;">Vidas</div>
+                                    <div class="book-meta">
+                                        <span class="b-title">Vidas Secas</span>
+                                        <span class="b-author">Graciliano Ramos</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="book-meta">
+                                    <span class="b-title">Mariana Costa</span>
+                                    <span class="b-author">mariana.costa@email.com</span>
+                                </div>
+                            </td>
+                            <td class="code-text">10/11/2026</td>
+                            <td class="code-text">24/11/2026</td>
+                            <td class="text-center status-green">Ativo</td>
+                            <td class="text-center">
+                                <button class="btn-action" style="background-color: #162c3d; color: #38bdf8; border: none; padding: 6px 12px; border-radius: 6px; cursor: pointer; font-size: 0.8rem; font-weight: 600;">Devolver</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </main>
+    </div>
+
+</body>
+</html>
